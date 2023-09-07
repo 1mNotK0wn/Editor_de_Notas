@@ -10,8 +10,22 @@ public class Program
 
     public static void Main()
     {
+        Console.WriteLine(@"
+=======================================================
+                        Notas
+=======================================================
 
+Copie e cole aqui o caminho para a pasta que deseja armazenar as notas:
+");
         string file_path = Console.ReadLine() + "\\";
+
+        if (!Directory.Exists(file_path))
+        {
+            Console.WriteLine($"{file_path} não existe.");
+            Console.ReadKey();
+
+            Environment.Exit(0);
+        }
 
         while (true)
         {
@@ -149,6 +163,8 @@ Selecione uma opção:
             if (File.Exists(path))
             {
                 File.Delete(path);
+                Console.WriteLine($"O arquivo {name + ext} foi deletado com sucesso.");
+                Console.ReadKey();
             }
             else
             {
