@@ -5,7 +5,6 @@ namespace GeradordeArquivo;
 
 public class Program
 {
-    const string file_path = "SUA PASTA AQUI"; //ESCOLHA UMA PASTA E COLE O CAMINHO AQUI ANTES DE EXECUTAR O CÓDIGO
     const string ext = ".txt";
 
     static void Main()
